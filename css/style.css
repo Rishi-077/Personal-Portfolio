@@ -66,10 +66,93 @@ img {
 }
 
 .image {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.z-index {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--main-color);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.title:after{
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color:var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.section-header {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title-sm {
+  color: var(--dark-one);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.points-sq {
+  width: 210px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #6b44e0;
+}
+
+.btn.small {
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+}
+
 /* End general styles */
 
 /* header */
@@ -78,6 +161,7 @@ header {
   width: 100%;
   background-color: var(--background-color);
   overflow: hidden;
+  position: relative;
 }
 
 nav {
@@ -88,7 +172,7 @@ nav {
 
 nav .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 6rem;
   align-items: center; 
 }
@@ -171,3 +255,179 @@ nav .container {
 .header-content .image .img-element {
   max-width: 750px;
 }
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.overlay .shape {
+  width: initial;
+  opacity: 0.13;
+  position: absolute;
+}
+
+.overlay.overlay-lg .shape {
+  height: 55px;
+}
+
+.overlay.overlay-lg .shape.wave {
+  height: initial;
+  width: 88px;
+}
+
+.overlay.overlay-lg .shape.x {
+  height: 38px;
+}
+
+header .square {
+  right: 68%;
+  top: 71%;
+}
+
+header .triangle {
+  right: 7%;
+  top: 75%;
+}
+
+header .x {
+  right: 4%;
+  top: 50%;
+}
+
+header .half-circle {
+  right: 50%;
+  bottom: 82%;
+}
+
+header .half-circle1 {
+  right: 5%;
+  top: 67%;
+}
+
+header .wave1 {
+  bottom: 75%;
+  left: 20%;
+}
+
+header .wave2 {
+  bottom: 8%;
+  right: 55%;
+}
+
+header .circle {
+  left: 38%;
+  bottom: 63%;
+}
+
+.points {
+  opacity: 0.3;
+  position: absolute;
+}
+
+header .points1{
+  width: 420px;
+  bottom: -75px;
+  left: -150px;
+}
+
+header .points2{
+  width: 70%;
+  top: 65%;
+  left: 71%;
+}
+
+.letters{
+  position: absolute;
+  width: 13.5%;
+  top: -5px;
+  left: 15px;
+  opacity: 0.06;
+}
+
+/* end header  */
+
+
+/* portfolio */
+
+.portfolio{
+  width: 100%;
+  background-color: var(--light-two);
+  position: relative;
+  min-height: 1200px;
+}
+
+.background-bg {
+  position: absolute;
+  width: 100%;
+  height: 520px;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+}
+
+.portfolio .title, .portfolio .title:before{
+  color: var(--light-one);
+}
+
+.portfolio .title:after {
+  background-color: var(--light-one);
+}
+
+.overlay.overlay-sm .shape {
+  filter: brightness(0) invert(1);
+  opacity: 0.15;
+  height: 40px;
+}
+
+.overlay.overlay-sm .shape.wave{
+  height: initial;
+  width: 70px;
+
+}
+
+.overlay.overlay-sm .shape.x {
+  height: 30px;
+}
+
+.portfolio .square {
+  top: 28%;
+  left: 20%; 
+}
+
+.portfolio .circle {
+  top: 8%;
+  right: 35%; 
+}
+
+.portfolio .triangle {
+  bottom: 10%;
+  right: 4%;
+}
+
+.portfolio .half-circle{
+  bottom: 13%;
+  left: 5%;
+}
+
+.portfolio .half-circle1{
+  top: 35%;
+  right: 20%;  
+}
+
+.portfolio .x {
+  top: 10%;
+  right: 8%;
+}
+
+.portfolio .wave {
+  top: 38%;
+  left: 6%;
+}
+
+/* end portfolio */

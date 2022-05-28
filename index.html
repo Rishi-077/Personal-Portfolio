@@ -6,56 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rishi Portfolio</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+/>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("user_99q7DVqiRkHk9AlrAmpyc");
+      })();
+    </script>
+  
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+
 </head>
 <body>
   <main>
-    <header>
+    <header id="header">
       <div class="overlay overlay-lg">
-        <img src="./img/shapes/letters.png" class="letters" alt="" />
         <img src="./img/shapes/circle.png" alt="" class="shape circle" />
         <img src="./img/shapes/half-circle.png" alt="" class="shape half-circle" />
          <img src="./img/shapes/half-circle.png" alt="" class="shape half-circle1" />
-        <!-- <img src="./img/shapes/logo.png" alt="" class="shape logo" /> -->
         <img src="./img/shapes/points1.png" alt="" class="points points1" />
-        <!-- <img src="./img/shapes/points3.png" alt="" class="points points3" />
-        <img src="./img/shapes/points4.png" alt="" class="points points4" /> -->
+        <img src="./img/shapes/points4.png" alt="" class="points points4" /> 
         <img src="./img/shapes/square.png" alt="" class="shape square" />
-        <!-- <img src="./img/shapes/wave.png" alt="" class="shape wave wave" /> -->
         <img src="./img/shapes/wave.png" alt="" class="shape wave wave1" />
         <img src="./img/shapes/wave.png" alt="" class="shape  wave wave2" />
-        <!-- <img src="./img/shapes/wavy-shape.png" alt="" class="shape wavy-shape" /> -->
         <img src="./img/shapes/x.png" alt="" class="shape x" />
         <img src="./img/shapes/circle.png" alt="" class="shape circle" />
       </div>
 
       <nav>
         <div class="container">
-         <!-- <div class="logo">
-           <img src="./img/nav logo.jpg" alt=""/>
-         </div> -->
+         
           <div class="links">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="#header">Home</a>
               </li>
               <li>
-                <a href="#">About me</a>
+                <a href="#about">About me</a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li>
-                <a href="#">Testimonials</a>
+                <a href="#testimonials">Testimonials</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href="#" class="active">Hire me</a>
+                <a href="#contact" class="active">Hire me</a>
               </li>
             </ul>
           </div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+
         </div>
       </nav>
 
@@ -66,7 +82,7 @@
             <P class="text">
               As a Frontend developer, With remarkable experience in web design and development
             </P>
-            <a href="#" class="btn">Download CV</a>
+            <a href="https://drive.google.com/file/d/1ujaVRApBKOsH_icXyKRerEsa24y6jOBy/view?usp=sharing" target="_blank" class="btn">Download CV</a>
           </div>
 
           <div class="column-2 image">
@@ -77,7 +93,57 @@
       </div>
     </header>
 
-    <section class="portfolio section">
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="title" data-title="who am I">About me</h3>
+        </div>
+
+        <div class="section-body grid-2">
+          <div class="column-1">
+            <h3 class="title-sm">Hello, I'm</h3>
+            <p class="text">As a Front-End Developer I created a lot of different websites for our clients using  HTML, CSS and JavaScript and React to built the sites. I helped to improve the developer experience of the company by implementing tools to improve our software development process.</p>
+            <div class="skills">
+              <div class="skill html">
+                <h3 class="skill-title">HTML</h3>
+                <div class="skill-bar">
+                  <div 
+                  class="skill-progress" 
+                  data-progress="90%"></div>
+                </div>
+              </div>
+
+               <div class="skill css">
+                <h3 class="skill-title">CSS</h3>
+                <div class="skill-bar">
+                  <div 
+                  class="skill-progress"
+                  data-progress="70%"></div>
+                </div>
+              </div>
+
+               <div class="skill ReactJS">
+                <h3 class="skill-title">ReactJS</h3>
+                <div class="skill-bar">
+                  <div 
+                  class="skill-progress" 
+                  data-progress="50%"></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://github.com/Rishi-077" target="_blank" class="btn">more info</a>
+          </div>
+
+          <div class="column-2 image">
+            <img src="./img/shapes/points4.png" class="points" alt="" />
+            <img src="./img/portfolio/about me.jpg" class="z-index" alt="about image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="projects">
       <div class="background-bg">
         <div class="overlay overlay-sm">
           <img src="./img/shapes/half-circle.png" alt="" class="shape half-circle" />
@@ -95,15 +161,7 @@
           <h3 class="title" data-title="My works">Portfolio</h3>
         </div>  
 
-        < class="section-body">
-          <!-- <div class="filter">
-            <button class="filter-btn"></button>
-            <button class="filter-btn"></button>
-            <button class="filter-btn"></button>
-            <button class="filter-btn"></button>
-            <button class="filter-btn"></button> 
-          </div> -->
-
+       
           <div class="grid">
             <div class="grid-item">
               <div class="gallery-image">
@@ -190,15 +248,318 @@
           </div>
 
           <div class="more-folio">
-            <a href="#" class="btn">more folio</a>
+            <a href="#morefolio" class="btn">more folio</a>
           </div>
         </div>
       </div>
     </section>
+   
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="What People Say">Testimonials</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      “Many of life’s failures are people who did not realize how close they were to success when they gave up.”
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name"> Thomas A. Edison
+                      </h3>
+                      <h5 class="review-job">American Inventor</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      “Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.”
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">Steve jobs</h3>
+                      <h5 class="review-job">American entrepreneur</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      “If you’re not stubborn, you’ll give up on experiments too soon. And if you’re not flexible, you’ll pound your head against the wall and you won’t see a different solution to a problem you’re trying to solve.”
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">Jeff Bezos</h3>
+                      <h5 class="review-job">Founder of amazon</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      To become 'unique,' the challenge is to fight the hardest battle which anyone can imagine until you reach your destination.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">A.P.J Abdul Kalam</h3>
+                      <h5 class="review-job">Former President of India</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="column-2 image">
+              <img src="./img/portfolio/about me.jpg" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-info">
+              <h3 class="title">Get in touch</h3>
+              <div class="information-wrap">
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <p class="info-text">Muthunagar, AR quatres near, Sivagangai-630561</p>
+                </div>
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </div>
+                  <p class="info-text">rishikesan070@gamil.com</p>
+                </div>
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <p class="info-text">936-108-7223</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3 class="title">Contact me</h3>
+              <div class="row">
+                <input type="text" class="contact-input fname" placeholder="First Name" />
+                <input type="text" class="contact-input lname" placeholder="Last Name" />
+              </div>
+
+              <div class="row">
+                <input type="text" class="contact-input phone" placeholder="Phone" />
+                <input type="Email" class="contact-input Email" placeholder="Email" />
+              </div>
+
+              <div class="row">
+                <textarea name="message" class="contact-input textarea message" placeholder="Message"></textarea>
+              </div>
+
+              <a href="#" class="btn send">Send</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      <section class="hireme" id="morefolio">
+        <div class="container">
+          <h3 class="title" data--title="more-folio">Let's See More Profiles</h3>
+
+          <div class="profiles">
+            <div class="github">
+              <a href="https://github.com/Rishi-077" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              
+            </div>
+
+            <div class="instagram">
+                <a href="https://www.linkedin.com/in/rishi-kesan-2b23ba228/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="linkedin">
+              
+                <a href="https://www.instagram.com/rishi_deiv_07/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="bottom-footer">
+            <div class="copyright">
+              <p class="text">copyright&copy; 2022. Recreated by <span>Rishi</span></p>
+            </div>
+
+            <div class="followme-wrap">
+              <div class="followme">
+                <h3>Follow me</h3>
+                <span class="footer-line"></span>
+                <div class="social-media">
+                  <a href="https://twitter.com/Rishi84717534" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/rishi_deiv_07/" target="_blank">
+                    <i class='fab fa-instagram'></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/rishi-kesan-2b23ba228/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="back-btn-wrap">
+                <a href="#" class="back-btn">
+                  <i class="fas fa-chevron-up"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./js/isotope.pkgd.min.js"></script>
-  <script src="./js/app.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script defer src="./js/isotope.pkgd.min.js"></script>
+
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script defer src="./js/app.js"></script>
+
+<!-- sweet alert -->
+<script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- sweet alert -->
+
+
+<!-- email js -->
+    <script>
+
+      function validate() {
+        let firstName = document.querySelector('.fname');
+        let lastName = document.querySelector('.lname');
+        let phone = document.querySelector('.phone');
+        let email = document.querySelector('.Email');
+        let message = document.querySelector('.message');
+        let send = document.querySelector('.send');
+
+        send.addEventListener('click', (e) => {
+          e.preventDefault();
+
+           if(!sendMail(firstName.value, lastName.value, email.value, phone.value,message.value)) {
+              error();
+            }
+          if(firstName.value == "" || lastName.value == "" || email.value == "" || phone.value == "" || message.value == ""){
+            inputEmpty();
+          }else{
+            sendMail(firstName.value, lastName.value, email.value, phone.value, message.value);
+            success();
+            console.log('email send');
+          }
+        })
+      }
+      validate();
+
+      function sendMail(firstName, lastName, email, phone, message) {
+        emailjs.send("service_30ax7p2","template_hsglyb8",{
+          first_name: firstName,
+          last_name: lastName,
+          Email_id: email,
+          phone_no: phone,
+          message: message,
+});
+      }
+
+      function success() {
+        swal({
+          title: "Good job!",
+          text: "Successfully send message :) ",
+          icon: "success",
+          button: "Close",
+      });
+      }
+      success();  
+
+      function error() {
+        swal({
+          title: "Error!",
+          text: "Something went wrong message could not be sent :) ",
+          icon: "error",
+          button: "ok!",
+      });
+      }
+      error();  
+
+      function inputEmpty() {
+        swal({
+          title: "Oops...",
+          text: "Input fields are required",
+          icon: "error",
+          button: "ok!",
+      });
+      }
+      inputEmpty();  
+    </script>
+<!-- End emailjs -->
 </body>
 </html>

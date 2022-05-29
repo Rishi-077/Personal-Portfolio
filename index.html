@@ -414,10 +414,12 @@
               </div>
 
               <div class="row">
-                <textarea name="message" class="contact-input textarea message" placeholder="Message"></textarea>
+                <textarea type="textarea" 
+                name="message" 
+                class="contact-input textarea message" placeholder="Message"></textarea>
               </div>
 
-              <a href="#" class="btn send">Send</a>
+              <a class="btn send">Send</a>
             </div>
           </div>
         </div>
@@ -511,23 +513,34 @@
         let email = document.querySelector('.Email');
         let message = document.querySelector('.message');
         let send = document.querySelector('.send');
+        let inputs = document.querySelectorAll('input');
+        let text = document.querySelectorAll('textarea');
 
         send.addEventListener('click', (e) => {
           e.preventDefault();
 
-           if(!sendMail(firstName.value, lastName.value, email.value, phone.value,message.value)) {
-              error();
-            }
           if(firstName.value == "" || lastName.value == "" || email.value == "" || phone.value == "" || message.value == ""){
             inputEmpty();
           }else{
             sendMail(firstName.value, lastName.value, email.value, phone.value, message.value);
-            success();
-            console.log('email send');
-          }
+            success();  
+          }  
         })
+
+         send.addEventListener('click', () => {
+          inputs.forEach(input => input.value = '');
+          text.forEach(texts => texts.value = '');
+        })
+        
+        // send.addEventListener('click', () => {
+          
+        // })
+        
+       
       }
       validate();
+
+       
 
       function sendMail(firstName, lastName, email, phone, message) {
         emailjs.send("service_30ax7p2","template_hsglyb8",{
@@ -536,7 +549,7 @@
           Email_id: email,
           phone_no: phone,
           message: message,
-});
+        });
       }
 
       function success() {
@@ -568,6 +581,8 @@
       });
       }
       inputEmpty();  
+
+     
     </script>
 <!-- End emailjs -->
 </body>
